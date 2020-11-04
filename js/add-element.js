@@ -35,7 +35,6 @@ function addElement() {
       $(this).parent().text(userinput);
 
       });
-
       
 
 }
