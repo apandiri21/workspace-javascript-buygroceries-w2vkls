@@ -24,7 +24,7 @@ document.getElementById("add").addEventListener("click", addElement);
 function addElement() {
   // add a new element
       // add a new element
-      $("#todo").append("<li><input type="text"> </li>");
+      $("#todo").append("<li><input type='text'> </li>");
 
       $('input').blur(function() {
         console.log("reach");

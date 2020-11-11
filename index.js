@@ -17,7 +17,6 @@ import * as firebaseui from "firebaseui";
 
 // Add Firebase project configuration object here
 var firebaseConfig = {
-  const firebaseConfig = {
   apiKey: "AIzaSyBxp6X1OSsbS_VRxIlZDXC3cLE1OffbKCE",
   authDomain: "grocerylist-6f38e.firebaseapp.com",
   databaseURL: "https://grocerylist-6f38e.firebaseio.com",
@@ -27,11 +26,28 @@ var firebaseConfig = {
   appId: "1:389435855205:web:2667f96e169ad872cc918c",
   measurementId: "G-MTSB5QWTT1"
 };
-};
 
 firebase.initializeApp(firebaseConfig);
 
-
-
 // Save the list to database
 
+$("#save").click(function(){
+// document.querySelectorAll('li') ==> nodelist
+// for loop to go through each nodelist
+// and then get the text content
+
+  $('li').each(function(){
+    var value = $(this).text();
+    console.log(value);
+
+  firebase
+  .firestore()
+  .collection("mylist")
+  .add({
+    item: value//?
+  });
+
+
+  });
+
+});
